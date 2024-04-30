@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Solomon HTML</title>
+    <link rel="icon" href="../chesc/Downloads/binilogo.jpg">
+    <style>
+
+        .half-width {
+            width: 50%;
+        }
+        .fixed-height {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Title -->
+    <h1>Solomon, Maria Franchesca R.</h1>
+
+    <!-- Hyperlink that opens in a new tab -->
+    <a href="https://www.youtube.com/watch?v=J1Ip2sC_lss" target="_blank">YOUTUBE</a>
+<br>
+    <!-- Image that opens the image once clicked -->
+    <a href="file:///C:/Users/chesc/Downloads/%23bini%20✿.jpg" target="_blank"><img src="image.jpg" alt="Image" width="200" height="200"></a>
+<br>
+<br>
+
+    <!-- Table -->
+    <table border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>Franchesca</td>
+            <td>Solomon</td>
+        </tr>
+    </table>
+
+    <!-- Paragraph (50% width; 100px height) -->
+    <p class="half-width fixed-height">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+<br>
+    <!-- Div -->
+    <div>This is a div.</div>
+
+    <!-- Span -->
+    <span>This is a span.</span>
+<br>
+<br>
+    <!-- HTML Form -->
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
