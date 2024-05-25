@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            text-align: center;
+            background-color: rgb(202, 152, 208);
+            padding-top: 35px;
+        }
+        .output {
+            margin-top: 50px;
+            white-space: pre;
+            font-family: Arial;
+            font-size: 24px;
+        }
+        label {
+            font-size: 24px;
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>˚　　　　✦　　　.　　. 　 ˚　.　　　　　 . ✦　　　 　˚　　　　 . ★⋆.
+        　　　.   　　˚　　 　　*　　 　　✦　　　.　　.　　　✦　˚ 　　　　 ˚　.˚　　　　　　.　　. 　 ˚　.　　　　 　　 　　　　 ✦</h1>
+    <br> 
+        <h2>Odd or Even Checker</h2>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" min="1">
+    <button onclick="checkOddEven()">Submit</button>
+    <div id="oddEvenOutput" class="output"></div>
+
+    <h2>Calculate BMI</h2>
+    <label for="weightInput">Enter weight (kg):</label>
+    <input type="number" id="weightInput" min="1">
+    <label for="heightInput">Enter height (m):</label>
+    <input type="number" id="heightInput" step="0.01" min="0.1">
+    <button onclick="calculateBMI()">Calculate BMI</button>
+    <div id="bmiOutput" class="output"></div>
+
+    <h2>Text Display</h2>
+    <label for="textInput">Enter some text:</label>
+    <input type="text" id="textInput">
+    <button onclick="displayText()">Display Text</button>
+    <div id="textOutput" class="output"></div>
+    <h1>˚　　　　✦　　　.　　. 　 ˚　.　　　　　 . ✦　　　 　˚　　　　 . ★⋆.
+        　　　.   　　˚　　 　　*　　 　　✦　　　.　　.　　　✦　˚ 　　　　 ˚　.˚　　　　　　.　　. 　 ˚　.　　　　 　　 　　　　 ✦</h1>
+
+    <script>
+        function checkOddEven() {
+            const num = parseInt(document.getElementById('numberInput').value);
+            if (isNaN(num) || num < 1) {
+                alert("Please enter a valid positive number.");
+                return;
+            }
+
+            const oddEvenOutput = document.getElementById('oddEvenOutput');
+            if (num % 2 === 0) {
+                oddEvenOutput.textContent = `${num} is an even number(˶ˆᗜˆ˵)`;
+            } else {
+                oddEvenOutput.textContent = `${num} is an odd number(˶ᵔ ᵕ ᵔ˶)`;
+            }
+        }
+
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('weightInput').value);
+            const height = parseFloat(document.getElementById('heightInput').value);
+            if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+                alert("Please enter valid weight and height.");
+                return;
+            }
+
+            const bmi = weight / (height * height);
+            let category;
+            if (bmi < 18.5) {
+                category = "Underweight ( ˶°ㅁ°)!!";
+            } else if (bmi < 25) {
+                category = "Normal weight ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧";
+            } else if (bmi < 30) {
+                category = "Overweight (⊙_⊙)";
+            } else {
+                category = "Obesity (╥﹏╥)";
+            }
+
+            const bmiOutput = document.getElementById('bmiOutput');
+            bmiOutput.textContent = `BMI: ${bmi.toFixed(2)} (${category})`;
+        }
+
+        function displayText() {
+            const text = document.getElementById('textInput').value;
+            if (text.trim() === '') {
+                alert("Please enter some text ᡣ • . • 𐭩 ♡");
+                return;
+            }
+
+            const textOutput = document.getElementById('textOutput');
+            textOutput.textContent = text;
+        }
+    </script>
+</body>
+</html>
