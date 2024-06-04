@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Library Information</title>
+</head>
 <body>
-<h1>JavaScript Arrays</h1>
+    <h1>Library Information</h1>
+    <ul id="bookList"></ul>
 
-<p id="demo"></p>
+    <script>
+        var library = [
+            { author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true },
+            { author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true },
+            { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }
+        ];
 
-<script>
-const cars = ["Saab", "Volvo", "BMW"];
-document.getElementById("demo").innerHTML = cars[1];
-</script>
+        var bookList = document.getElementById('bookList');
 
+        try {
+            library.forEach(function(book) {
+                var listItem = document.createElement('li');
+                listItem.Content = 'Book: ' + book.title + ', Author: ' + book.author + ', Reading Status: ' + (book.readingStatus ? 'Already Read' : 'Not Read Yet');
+                bookList.appendChild(listItem);
+            });
+        } 
+        catch (error) {
+            console.error('An error occurred:', error.message);
+        }
+        
+    </script>
 </body>
-</html> 
+</html>
