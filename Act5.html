@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Library Information</title>
+    <title>Library Information and Bubble Sort Example</title>
 </head>
 <body>
     <h1>Library Information</h1>
     <ul id="bookList"></ul>
+
+    <h1>Bubble Sort</h1>
+    <h2>Sorted Array</h2>
+    <p id="sortedArray"></p>
 
     <script>
         var library = [
@@ -19,14 +23,33 @@
         try {
             library.forEach(function(book) {
                 var listItem = document.createElement('li');
-                listItem.Content = 'Book: ' + book.title + ', Author: ' + book.author + ', Reading Status: ' + (book.readingStatus ? 'Already Read' : 'Not Read Yet');
+                listItem.textContent = 'Book: ' + book.title + ', Author: ' + book.author + ', Reading Status: ' + (book.readingStatus ? 'Already Read' : 'Not Read Yet');
                 bookList.appendChild(listItem);
             });
-        } 
-        catch (error) {
+        } catch (error) {
             console.error('An error occurred:', error.message);
         }
-        
+
+        function bubbleSort(arr) {
+            var len = arr.length;
+            for (var i = 0; i < len; i++) {
+                for (var j = 0; j < len - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        // Swap the elements
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        var sampleData = [7, 2, 0, 3, -5, 1];
+        var sortedData = bubbleSort(sampleData);
+        document.getElementById("sortedArray").textContent = 'Sorted Array: ' + sortedData.join(', ');
     </script>
 </body>
 </html>
+Sent
+Write to
