@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sining - Digital Sanctuary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Guest</a></li>
+                <li><a href="#">Submit Artwork</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filter-bar">
+            <label for="filter-year">Year:</label>
+            <select id="filter-year">
+                <option value="all">All</option>
+                <!-- Add year options dynamically later -->
+            </select>
+
+            <label for="filter-artist">Artist:</label>
+            <select id="filter-artist">
+                <option value="all">All</option>
+                <!-- Add artist options dynamically later -->
+            </select>
+
+            <label for="filter-style">Style:</label>
+            <select id="filter-style">
+                <option value="all">All</option>
+                <!-- Add style options dynamically later -->
+            </select>
+        </section>
+
+    <main>
+        <section class="intro">
+            <div class="Sining">
+                <h1 style="font-size: 500%;">Sining</h1>
+                <h2 style="font-size: 300%;">Digital Sanctuary</h2>
+                <p>Sining (which means "art" in Filipino) is a digital sanctuary dedicated to showcasing the diverse and vibrant landscape of Filipino artistry. Through the fusion of HTML, CSS, and JavaScript, this platform offers users an immersive journey into the captivating world of local Filipino artworks. From traditional masterpieces to contemporary expressions, Sining provides a curated space where visitors can explore and appreciate the richness of Filipino cultural heritage through its visual narratives.</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+
+            <!-- Artworks will be displayed here -->
+            <div class="artwork" data-artist="Artist Name" data-title="Artwork Title" data-description="Artwork Description">
+                <img src="midterms/artwork1.jpg" alt="Artwork Title">
+                <div class="artwork-details">
+                    <h2>Artwork Title</h2>
+                    <p>by Artist Name</p>
+                </div>
+            </div>
+
+            <div class="artwork" data-artist="Artist Name" data-title="Artwork Title" data-description="Artwork Description">
+                <img src="midterms/artwork2.jpg" alt="Artwork Title">
+                <div class="artwork-details">
+                    <h2>Artwork Title</h2>
+                    <p>by Artist Name</p>
+                </div>
+            </div>
+            
+            <div class="artwork" data-artist="Artist Name" data-title="Artwork Title" data-description="Artwork Description">
+                <img src="midterms/artwork3.jpg" alt="Artwork Title">
+                <div class="artwork-details">
+                    <h2>Artwork Title</h2>
+                    <p>by Artist Name</p>
+                </div>
+            </div>
+
+            <div class="artwork" data-artist="Artist Name" data-title="Artwork Title" data-description="Artwork Description">
+                <img src="midterms/artwork4.jpg" alt="Artwork Title">
+                <div class="artwork-details">
+                    <h2>Artwork Title</h2>
+                    <p>by Artist Name</p>
+                </div>
+            </div>
+
+            <div class="artwork" data-artist="Artist Name" data-title="Artwork Title" data-description="Artwork Description">
+                <img src="midterms/artwork5.jpg" alt="Artwork Title">
+                <div class="artwork-details">
+                    <h2>Artwork Title</h2>
+                    <p>by Artist Name</p>
+                </div>
+            </div>
+
+            <div class="artwork" data-artist="Artist Name" data-title="Artwork Title" data-description="Artwork Description">
+                <img src="midterms/artwork6.jpg" alt="Artwork Title">
+                <div class="artwork-details">
+                    <h2>Artwork Title</h2>
+                    <p>by Artist Name</p>
+                </div>
+            </div>
+
+            <div class="artwork" data-artist="Artist Name" data-title="Artwork Title" data-description="Artwork Description">
+                <img src="midterms/artwork7.jpg" alt="Artwork Title">
+                <div class="artwork-details">
+                    <h2>Artwork Title</h2>
+                    <p>by Artist Name</p>
+                </div>
+            </div>
+
+            <div class="artwork" data-artist="Artist Name" data-title="Artwork Title" data-description="Artwork Description">
+                <img src="midterms/artwork8.jpg" alt="Artwork Title">
+                <div class="artwork-details">
+                    <h2>Artwork Title</h2>
+                    <p>by Artist Name</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sining. All rights reserved.</p>
+    </footer>
+
+    <div id="artwork-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
