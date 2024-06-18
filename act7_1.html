@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+
+$(document).ready(function(){
+  $("#photo").click(function(){
+    $(this).animate({
+      left: "+=100px",
+      top: "+=100px"
+    }, "slow");
+  });
+});
+
+</script>
+<style> 
+#photo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  transition: all 0.5s;
+
+
+}
+</style>
+</head>
+<body>
+
+<img id="photo" src="Downloads/photo.png" alt="duck Photo">
+
+</body>
+</html>
