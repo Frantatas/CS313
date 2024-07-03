@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #C8A888;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #5F1A1F;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#roomSelection {
+    margin-top: 10px;
+}
+
+.room-btn {
+    padding: 10px 20px;
+    background-color: #C8A888;
+    border: 2px solid #5F1A1F;
+    border-radius: 5px;
+    color: #5F1A1F;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.room-btn:hover {
+    background-color: #5F1A1F;
+    color: #C8A888;
+    transform: scale(1.05);
+}
+
+.room-container {
+    display: none;
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjust height to be less than full-screen */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room {
+    width: 80%;
+    height: 80%;
+    border: 10px solid #5F1A1F; /* Increase border size */
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.room:hover {
+    transform: scale(1.02);
+}
+
+#room1 {
+    background-image: url('1.jpg');
+}
+
+#room2 {
+    background-image: url('2.jpg');
+}
+
+#room3 {
+    background-image: url('3.jpg');
+}
+
+#room4 {
+    background-image: url('4.jpg');
+}
+
+.character {
+    width: 50px;
+    height: 50px;
+    background-image: url('nova.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    transition: transform 0.3s;
+}
+
+.character.show {
+    display: block;
+}
+
+.character:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
