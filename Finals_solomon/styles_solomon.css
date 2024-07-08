@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f4f4f9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #282c34;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#roomSelection {
+    margin-top: 10px;
+}
+
+.room-btn {
+    padding: 10px 20px;
+    background-color: #61dafb;
+    border: 2px solid #282c34;
+    border-radius: 5px;
+    color: #282c34;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.room-btn:hover {
+    background-color: #282c34;
+    color: #61dafb;
+    transform: scale(1.05);
+}
+
+.room-container {
+    display: none;
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjust height to be less than full-screen */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room {
+    width: 80%;
+    height: 80%;
+    border: 10px solid #282c34; /* Increase border size */
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.room:hover {
+    transform: scale(1.02);
+}
+
+#room1 {
+    background-image: url('1.jpg');
+}
+
+#room2 {
+    background-image: url('2.jpg');
+}
+
+#room3 {
+    background-image: url('3.jpg');
+}
+
+#room4 {
+    background-image: url('4.jpg');
+}
+
+.character {
+    width: 50px;
+    height: 50px;
+    background-image: url('nova.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    transition: transform 0.3s;
+}
+
+.character.show {
+    display: block;
+}
+
+.character:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+#scoreboard {
+    font-size: 24px;
+    font-weight: bold;
+    color: #61dafb;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
+@keyframes scoreUpdate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.score-update {
+    animation: scoreUpdate 0.5s;
+}
+
+#playAgainBtn {
+    padding: 10px 20px;
+    background-color: #282c34;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+#playAgainBtn:hover {
+    background-color: #61dafb;
+    color: #282c34;
+    transform: scale(1.05);
+}
