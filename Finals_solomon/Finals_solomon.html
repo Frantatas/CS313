@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Nova</title>
+    <link rel="stylesheet" href="styles_solomon.css">
+</head>
+<body>
+    <header>
+        <div id="roomSelection">
+            <button class="room-btn" data-room="1">Room 1</button>
+            <button class="room-btn" data-room="2">Room 2</button>
+            <button class="room-btn" data-room="3">Room 3</button>
+            <button class="room-btn" data-room="4">Room 4</button>
+        </div>
+        <div id="scoreboard">Score: <span id="score">0</span></div>
+        <button id="instructionsBtn">Instructions</button>
+    </header>
+    <div class="room-container">
+        <div class="room" id="room1">
+            <div class="character" id="character1"></div>
+        </div>
+        <div class="room" id="room2">
+            <div class="character" id="character2"></div>
+        </div>
+        <div class="room" id="room3">
+            <div class="character" id="character3"></div>
+        </div>
+        <div class="room" id="room4">
+            <div class="character" id="character4"></div>
+        </div>
+    </div>
+    <button id="playAgainBtn">Play Again</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="java_solomon.js"></script>
+</body>
+</html>
